@@ -1,0 +1,228 @@
+
+/* -- FONTES-- */
+
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC);
+
+
+@font-face {
+    font-family: coffee_icons;
+    src: url(../Fonts/coffee\ icons.ttf) format("truetype");
+}
+
+
+/*
+@font-face {
+    font-family: Coffee;
+    src: url(../Fonts/Coffee.ttf) format("truetype");
+};
+
+--------------------------------------------------------------------------*/
+
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+body, html {
+    height: 100%;
+    color: #999999;
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 0;
+    font-size: 10px;
+    font-weight: 100;
+  }
+
+/* Main Top */
+  
+  .container {
+    margin: 0 auto;
+    max-width: 750px;
+    padding: 0 24px;
+  }
+  
+  header {
+    animation: bgFadeIn 1s ease-in both;
+    position: relative;
+    padding: 1%;
+    text-align: center;
+    min-height: 63%;
+
+  }
+  
+  header h1 {
+    border-bottom: 2px solid #FFFFFF;
+    border-top: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    font-family: "Amatic SC", cursive;
+    font-size: 8.75rem;
+    margin: 0;
+  }
+
+  header h3 {
+    color: #FFF0A5;
+    font-family: "Abril Fatface", cursive;
+    font-size: 3.75rem;
+    font-style: italic;
+    font-weight: 100;
+    margin: 0;
+  }
+
+
+header:before {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/cup-wallpapers-28535-9361932.jpg");
+    background-color: #CCCCCC;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    content: ' ';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+
+  }
+  @keyframes bgFadeIn {
+    0% {
+      background-color: white;
+    }
+    100% {
+      background-color: rgba(255, 255, 255, 0);
+    }
+  }
+
+.banner-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.logo , .logo:hover{
+    font-family: coffee_icons;
+    color: white;
+    font-size: 50px;
+    text-decoration: none;
+
+}
+
+.navbar {
+    height: 8%;
+}
+
+/*-------------Main--------*/
+.txt{
+    font-size: 16px;
+    
+}
+
+.folha{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.textao{
+    font-family: Helvetica;
+    margin-left: 1%;
+    text-align: left;
+    border-left: #333333 1px ;
+    
+}
+.sombra{
+    box-shadow: -10px 3px 5px  #888888;
+}
+
+.carousel-inner img {
+    width: 20%;
+    height: 20%;
+}
+.carousel-center{
+    text-align: center;
+}
+
+/* JS Spawner*/
+
+.fadeIn{
+  animation: bgFadeIn 1s ease-in both;
+}
+.tabletop td{
+  border: 1px black solid;
+  background-color :#F2F2F2;
+}
+.specifytable{
+  background-color: #CCCCCC !important;
+}
+
+
+/*FOOTER*/
+
+.footer {
+    max-width: 100%;
+}
+footer.footer{
+	width: 100%;
+	margin: 0 auto;
+    border-top:1px solid #f1f1f1;
+}
+footer.footer p{
+	text-align: center;
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+footer.footer nav ul{
+	height: 20px;
+	background: #e1e1e1;
+}
+footer.footer nav ul li{
+	float: left;
+	width: 24%;
+    text-align: center;
+    display: block;
+    color: #333333
+}
+#formas-pgto p{
+	text-align: center;
+	color: #333333;
+}
+#formas-pgto{
+    height: 69px;
+	text-align:center;
+	background: url("../Images/formaspagamento.png") no-repeat;
+	width: 354px;
+	float:none; 
+	display:block; 
+	margin-left:auto; 
+	margin-right:auto;
+}
+
+
+/*  Generico  */
+
+.rainbow {
+    animation:rainbow 2s infinite;
+    }
+    @keyframes rainbow {
+    0% {color: #ff0000;}
+    10% {color: #ff8000;}
+    20% {color: #ffff00;}
+    30% {color: #80ff00;}
+    40% {color: #00ff00;}
+    50% {color: #00ff80;}
+    60% {color: #00ffff;}
+    70% {color: #0080ff;}
+    80% {color: #0000ff;}
+    90% {color: #8000ff;}
+    100% {color: #ff0080;}
+    }
+
+    .white{
+      color:#F2F2F2;
+    }
+    
+    .black{
+      color:#000000;
+    }
+    
