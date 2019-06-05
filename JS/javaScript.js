@@ -43,6 +43,16 @@ canecaPicker.addEventListener("click",event => {
 canecaPicker.click()
 }
 
+function modal()
+{
+    if (window.showModalDialog) {
+      window.showModalDialog('../modal.html',
+        [1, 4], "dialogwidth: 450; dialogheight: 300; resizable: yes");
+    } else {
+       alert("Seu navegador não suporta mais este método");
+    }
+}
+
 function classActiveChecker(id) {
     return document.getElementById(id).parentElement.classList.contains("active")
 }
