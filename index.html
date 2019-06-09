@@ -8,15 +8,15 @@
   <title>Document</title>
   <link rel="stylesheet" href="./Css/style.css">
   <link rel="stylesheet" href="./bootstrap4/css/bootstrap.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
-    crossorigin="anonymous">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
 
 </head>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark logo">
-  <a href="#">A</a>
-
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <img src="Images/CanecasPic/LogoImage.png" class="logo">
+  <h1 class="title text-left">Tchê Canecas</h1>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
     </ul>
@@ -45,26 +45,23 @@
         <div class="textao sombra">
           <div class="mt-3  ml-1">
             <h1>Nossa Historia</h1>
-                       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt sed exercitationem, nisi
-            reiciendis suscipit aut soluta in aliquam culpa quas harum ex ut eaque accusamus quisquam! Dolores
-            voluptatibus quod enim!
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt sed exercitationem, nisi reiciendis
             suscipit aut soluta in aliquam culpa quas harum ex ut eaque accusamus quisquam! Dolores voluptatibus quod
-            enim!
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt sed exercitationem, nisi reiciendis
-            suscipit aut soluta in aliquam culpa quas harum ex ut eaque accusamus quisquam! Dolores voluptatibus quod
-            enim!
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt sed exercitationem, nisi reiciendis
-            suscipit aut soluta in aliquam culpa quas harum ex ut eaque accusamus quisquam! Dolores voluptatibus quod
-            enim!
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt sed exercitationem, nisi reiciendis
-            suscipit aut soluta in aliqua
-          </div>m culpa quas harum ex ut eaque accusamus quisquam! Dolores voluptatibus quod
-          enim!
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt sed exercitationem, nisi reiciendis
-          suscipit aut soluta in aliquam culpa quas harum ex ut eaque accusamus quisquam! Dolores voluptatibus quod
-          enim!
-          para você
+            enim! Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Deserunt sed exercitationem, nisi reiciendis suscipit aut soluta in aliquam culpa quas
+            harum ex ut eaque accusamus quisquam! Dolores voluptatibus quod enim! Lorem ipsum dolor, sit amet
+            consectetur adipisicing
+            elit. Deserunt sed exercitationem, nisi reiciendis suscipit aut soluta in aliquam culpa quas harum ex ut
+            eaque accusamus quisquam! Dolores voluptatibus quod enim! Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Deserunt
+            sed exercitationem, nisi reiciendis suscipit aut soluta in aliquam culpa quas harum ex ut eaque accusamus
+            quisquam! Dolores voluptatibus quod enim! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt
+            sed exercitationem,
+            nisi reiciendis suscipit aut soluta in aliqua
+          </div>m culpa quas harum ex ut eaque accusamus quisquam! Dolores voluptatibus quod enim! Lorem ipsum dolor,
+          sit amet consectetur adipisicing elit. Deserunt sed exercitationem, nisi reiciendis suscipit aut soluta in
+          aliquam culpa quas
+          harum ex ut eaque accusamus quisquam! Dolores voluptatibus quod enim! para você
         </div>
 
         <br>
@@ -80,7 +77,7 @@
           <li data-target="#canecarousel" data-slide-to="1"></li>
           <li data-target="#canecarousel" data-slide-to="2"></li>
         </ul>
-        <div class="carousel-inner">
+        <div class="carousel-inner clickable" onclick="adquirirCaneca()">
           <div class="carousel-item active">
             <img src="./Images/CanecasPic/branca1.jpg" alt="Caneca1">
             <img src="./Images/CanecasPic/branca1.jpg" alt="Caneca1">
@@ -117,14 +114,12 @@
 
     <header>
       <div id="descricao" class="white">
-        <button class='btn mt-2 mb-2 btn btn-lg btn-success' type='button' class='btn btn-primary' data-toggle='modal'
-          data-target='#modalExemplo'>Adquira agora sua</button>
+        <button class='btn mt-2 mb-2 btn btn-lg btn-success' type='button' class='btn btn-primary'
+          onclick="adquirirCaneca()">Adquirir</button>
 
         <div class="text-left offset-2" id="descricaochild"></div>
-        Especialmente desenvolvidos para sublimação,
-        em resposta à solicitação dos modernos modelos de canecas.
-        Possui versões para compensação de pressão e calor.
-        Possibilita geração de desenho full HD 4K.
+        Especialmente desenvolvidos para sublimação, em resposta à solicitação dos modernos modelos de canecas. Possui
+        versões para compensação de pressão e calor. Possibilita geração de desenho full HD 4K.
         <br>
         <h3>Características: </h3>
         <ul class="text-left offset-2 ">

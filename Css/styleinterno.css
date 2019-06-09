@@ -1,10 +1,7 @@
-
 /* -- FONTES-- */
 
 @import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
 @import url(https://fonts.googleapis.com/css?family=Amatic+SC);
-
-
 @font-face {
     font-family: coffee_icons;
     src: url(../Fonts/coffee\ icons.ttf) format("truetype");
@@ -22,9 +19,19 @@
 * {
     box-sizing: border-box;
     font-size: 16px;
-  }
-  
-body, html {
+}
+
+.logo,
+.logo:hover {
+    width: 5%;
+    min-width: 75px;
+    height: 100%;
+    min-height: 100%;
+    cursor: pointer;
+}
+
+body,
+html {
     height: 100%;
     color: #999999;
     margin: 0;
@@ -32,63 +39,69 @@ body, html {
     padding: 0;
     font-size: 10px;
     font-weight: 100;
-  }
+}
 
-  .imagem{
+.title {
+    font-family: "Amatic SC", cursive;
+    color: white;
+    font-size: 250%
+}
+
+.imagem {
     max-height: 20% !important;
-    max-width:100% !important;
-  }
+    max-width: 100% !important;
+}
+
 
 /* Main Top */
 
-.margin20{
-  margin-top: 5%;
+.margin20 {
+    margin-top: 5%;
 }
 
-  .container {
+.container {
     margin: 0 auto;
     max-width: 750px;
     padding: 0 24px;
-  }
-  
-  header {
+}
+
+header {
     animation: bgFadeIn 1s ease-in both;
     position: relative;
     padding: 1%;
     text-align: center;
-  }
+}
 
-  .clickable:hover{
+.clickable:hover {
     cursor: pointer;
-  }
+}
 
-  header h1 {
+header h1 {
     border-bottom: 2px solid #FFFFFF;
     border-top: 2px solid #FFFFFF;
     color: #FFFFFF;
     font-family: "Amatic SC", cursive;
-    font-size:3rem;
+    font-size: 3rem;
     margin: 0;
-  }
+}
 
-  header h3 {
+header h3 {
     color: #FFF0A5;
     font-family: "Abril Fatface", cursive;
     font-size: 1.75rem;
     font-style: italic;
     font-weight: 100;
     margin: 0;
-  }
+}
 
-  
-  .titulo {
+.titulo {
     color: #000000;
     font-family: "Abril Fatface", cursive;
     font-size: 6rem;
     font-style: italic;
     font-weight: 100;
     margin: 0;
-  }
+}
 
 header:before {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/cup-wallpapers-28535-9361932.jpg");
@@ -104,76 +117,122 @@ header:before {
     right: 0;
     top: 0;
     z-index: -1;
-
-  }
-  @keyframes bgFadeIn {
-    0% {
-      background-color: white;
-    }
-    100% {
-      background-color: rgba(255, 255, 255, 0);
-    }
-  }
-
-.banner-image {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
 }
 
-.logo , .logo:hover{
+@keyframes bgFadeIn {
+    0% {
+        background-color: white;
+    }
+    100% {
+        background-color: rgba(255, 255, 255, 0);
+    }
+}
+
+.banner-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.logo,
+.logo:hover {
     font-family: coffee_icons;
     color: white;
     font-size: 50px;
     text-decoration: none;
-
 }
 
 .navbar {
     height: 8%;
 }
 
+
 /*-------------Main--------*/
-.txt{
+
+.txt {
     font-size: 16px;
-    
 }
 
-.folha{
+.folha {
     padding-left: 20%;
     padding-right: 20%;
 }
-.textao{
+
+.textao {
     font-family: Helvetica;
     margin-left: 1%;
     text-align: left;
-    border-left: #333333 1px ;
-    
-}
-.sombra{
-    box-shadow: -10px 3px 5px  #888888;
+    border-left: #333333 1px;
 }
 
-.carousel-inner img {
-    width: 20%;
-    height: 20%;
+.sombra {
+    box-shadow: -10px 3px 5px #888888;
 }
-.carousel-center{
-    text-align: center;
+
+#prod_nav {
+	height:156px;	
+	width:870px;
+	margin: auto
 }
+
+#prod_nav ul {	
+	width:960px;
+	margin:0 auto;	
+}
+
+#prod_nav li {	
+	float:left;
+	padding-left:1px;
+	width:172px;
+	list-style-type:none;
+	text-align:center;
+}
+
+#prod_nav a {
+	color:#333333;
+	display:block;
+	padding:17px;
+	position:relative;
+	word-spacing:-2px;
+	font-size:11px;		
+	height:122px;
+	text-decoration:none;
+}	
+
+#prod_nav a.current {
+	background: #f6f6f6;
+	float: none;
+	margin:0;
+	border-bottom: 3px solid #F15A23
+}
+
+#prod_nav img {
+	background-color:#fff;
+	border:1px solid #ccc;
+	margin:3px 0 5px 27px;
+	padding:4px;		
+	display:block;
+}
+
+#prod_nav strong {
+	display:block;		
+}
+
 
 /* JS Spawner*/
 
-.fadeIn{
-  animation: bgFadeIn 1s ease-in both;
+.fadeIn {
+    animation: bgFadeIn 1s ease-in both;
 }
-.tabletop td{
-  border: 1px black solid;
-  background-color :#F2F2F2;
+
+.tabletop td {
+    border: 1px black solid;
+    background-color: #F2F2F2;
 }
-.specifytable{
-  background-color: #CCCCCC !important;
+
+.specifytable {
+    background-color: #CCCCCC !important;
 }
 
 
@@ -182,67 +241,95 @@ header:before {
 .footer {
     max-width: 100%;
 }
-footer.footer{
-	width: 100%;
-	margin: 0 auto;
-    border-top:1px solid #f1f1f1;
+
+footer.footer {
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid #f1f1f1;
 }
-footer.footer p{
-	text-align: center;
-	font-size: 12px;
-	margin-bottom: 10px;
+
+footer.footer p {
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 10px;
 }
-footer.footer nav ul{
-	height: 20px;
-	background: #e1e1e1;
+
+footer.footer nav ul {
+    height: 20px;
+    background: #e1e1e1;
 }
-footer.footer nav ul li{
-	float: left;
-	width: 24%;
+
+footer.footer nav ul li {
+    float: left;
+    width: 24%;
     text-align: center;
     display: block;
     color: #333333
 }
-#formas-pgto p{
-	text-align: center;
-	color: #333333;
+
+#formas-pgto p {
+    text-align: center;
+    color: #333333;
 }
-#formas-pgto{
+
+#formas-pgto {
     height: 69px;
-	text-align:center;
-	background: url("../Images/formaspagamento.png") no-repeat;
-	width: 354px;
-	float:none; 
-	display:block; 
-	margin-left:auto; 
-	margin-right:auto;
+    text-align: center;
+    background: url("../Images/formaspagamento.png") no-repeat;
+    width: 354px;
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
 /*  Generico  */
 
 .rainbow {
-    animation:rainbow 2s infinite;
-    }
-    @keyframes rainbow {
-    0% {color: #ff0000;}
-    10% {color: #ff8000;}
-    20% {color: #ffff00;}
-    30% {color: #80ff00;}
-    40% {color: #00ff00;}
-    50% {color: #00ff80;}
-    60% {color: #00ffff;}
-    70% {color: #0080ff;}
-    80% {color: #0000ff;}
-    90% {color: #8000ff;}
-    100% {color: #ff0080;}
-    }
+    animation: rainbow 2s infinite;
+}
 
-    .white{
-      color:#F2F2F2;
+@keyframes rainbow {
+    0% {
+        color: #ff0000;
     }
-    
-    .black{
-      color:#000000;
+    10% {
+        color: #ff8000;
     }
-    
+    20% {
+        color: #ffff00;
+    }
+    30% {
+        color: #80ff00;
+    }
+    40% {
+        color: #00ff00;
+    }
+    50% {
+        color: #00ff80;
+    }
+    60% {
+        color: #00ffff;
+    }
+    70% {
+        color: #0080ff;
+    }
+    80% {
+        color: #0000ff;
+    }
+    90% {
+        color: #8000ff;
+    }
+    100% {
+        color: #ff0080;
+    }
+}
+
+.white {
+    color: #F2F2F2;
+}
+
+.black {
+    color: #000000;
+}

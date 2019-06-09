@@ -3,9 +3,9 @@ var canecaPicker = document.getElementById("canecaPicker")
 
 const sleep = (milliseconds) => {
     return new Promise(resolve => setTimeout(resolve, milliseconds))
-  }
+}
 
-
+/*
 
 function trocaCaneca(){
     let aux;
@@ -41,15 +41,13 @@ canecaPicker.addEventListener("click",event => {
       
 })
 canecaPicker.click()
-}
+}*/
 
-function modal()
-{
+function modal() {
     if (window.showModalDialog) {
-      window.showModalDialog('../modal.html',
-        [1, 4], "dialogwidth: 450; dialogheight: 300; resizable: yes");
+        window.showModalDialog('../modal.html', [1, 4], "dialogwidth: 450; dialogheight: 300; resizable: yes");
     } else {
-       alert("Seu navegador não suporta mais este método");
+        alert("Seu navegador não suporta mais este método");
     }
 }
 
@@ -58,24 +56,40 @@ function classActiveChecker(id) {
 }
 
 
-function adquirirCaneca(){
-    location="../paginainterna.html"
+function adquirirCaneca() {
+    location = "./paginainterna.html"
+}
+
+function gotomain(){
+    location = "./index.html"
 }
 
 
-function calculatotal(){
+function calculatotal() {
     let total = document.getElementById("total_final")
     let frete = document.getElementById("frete")
-    frete.value = (document.getElementById("qtde").value*68)%16 +1;
-    frete.innerHTML = 'Frete: R$'+ frete.value +',00' 
-    total.innerHTML = 'Total: R$' + (document.getElementById("qtde").value *2+ frete.value) +",00"
-    if((document.getElementById("qtde").value *2+ frete.value) > 50){
-        frete.innerHTML="Grátis para compras acima de R$50"
+    frete.value = Math.round((document.getElementById("qtde").value * 0.01) * 40) + 1;
+    frete.innerHTML = 'Frete: R$' + frete.value + ',00'
+    total.innerHTML = 'Total: R$' + (document.getElementById("qtde").value * 2 + frete.value) + ",00"
+    if ((document.getElementById("qtde").value * 2) > 50) {
+        frete.innerHTML = "Grátis para compras acima de R$50"
     }
- 
+
 }
 
-  
+$(function () {
+    $("#prod_nav ul").tabs("#panes > div", {
+        effect: 'fade',
+        fadeOutSpeed: 400
+    });
+});
+$(document).ready(function () {
+    $(".pane-list li").click(function () {
+        window.location = $(this).find("a").attr("href");
+        return false;
+    });
+});
+
 /*
 canecaMarfin
 canecaNeve
