@@ -1,11 +1,9 @@
-var descricaoProduto = document.getElementById("descricaoProduto")
-var canecaPicker = document.getElementById("canecaPicker")
+/*var descricaoProduto =$("#descricaoProduto")
+var canecaPicker = $("#canecaPicker")
 
 const sleep = (milliseconds) => {
     return new Promise(resolve => setTimeout(resolve, milliseconds))
 }
-
-/*
 
 function trocaCaneca(){
     let aux;
@@ -70,25 +68,12 @@ function calculatotal() {
     let frete = document.getElementById("frete")
     frete.value = Math.round((document.getElementById("qtde").value * 0.01) * 40) + 1;
     frete.innerHTML = 'Frete: R$' + frete.value + ',00'
-    total.innerHTML = 'Total: R$' + (document.getElementById("qtde").value * 2 + frete.value) + ",00"
-    if ((document.getElementById("qtde").value * 2) > 50) {
-        frete.innerHTML = "Grátis para compras acima de R$50"
+    total.innerHTML = 'Total: R$' + (document.getElementById("qtde").value * 20 + frete.value) + ",00"
+    if ((document.getElementById("qtde").value * 20) > 150) {
+        frete.innerHTML = "Grátis para compras acima de R$150"
     }
-
+    $("#btncomprar").show();
 }
-
-$(function () {
-    $("#prod_nav ul").tabs("#panes > div", {
-        effect: 'fade',
-        fadeOutSpeed: 400
-    });
-});
-$(document).ready(function () {
-    $(".pane-list li").click(function () {
-        window.location = $(this).find("a").attr("href");
-        return false;
-    });
-});
 
 /*
 canecaMarfin

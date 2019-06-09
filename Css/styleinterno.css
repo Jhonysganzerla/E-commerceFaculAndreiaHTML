@@ -48,8 +48,9 @@ html {
 }
 
 .imagem {
-    max-height: 20% !important;
-    max-width: 100% !important;
+    min-height: 20% !important;
+    min-width: 100% !important;
+    text-align: center center;
 }
 
 
