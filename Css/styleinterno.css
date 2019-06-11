@@ -151,91 +151,11 @@ header:before {
 
 /*-------------Main--------*/
 
-.txt {
-    font-size: 16px;
-}
-
-.folha {
-    padding-left: 20%;
-    padding-right: 20%;
-}
-
-.textao {
-    font-family: Helvetica;
-    margin-left: 1%;
-    text-align: left;
-    border-left: #333333 1px;
-}
-
-.sombra {
-    box-shadow: -10px 3px 5px #888888;
-}
-
-#prod_nav {
-	height:156px;	
-	width:870px;
-	margin: auto
-}
-
-#prod_nav ul {	
-	width:960px;
-	margin:0 auto;	
-}
-
-#prod_nav li {	
-	float:left;
-	padding-left:1px;
-	width:172px;
-	list-style-type:none;
-	text-align:center;
-}
-
-#prod_nav a {
-	color:#333333;
-	display:block;
-	padding:17px;
-	position:relative;
-	word-spacing:-2px;
-	font-size:11px;		
-	height:122px;
-	text-decoration:none;
-}	
-
-#prod_nav a.current {
-	background: #f6f6f6;
-	float: none;
-	margin:0;
-	border-bottom: 3px solid #F15A23
-}
-
-#prod_nav img {
-	background-color:#fff;
-	border:1px solid #ccc;
-	margin:3px 0 5px 27px;
-	padding:4px;		
-	display:block;
-}
-
-#prod_nav strong {
-	display:block;		
-}
-
-
 /* JS Spawner*/
 
 .fadeIn {
     animation: bgFadeIn 1s ease-in both;
 }
-
-.tabletop td {
-    border: 1px black solid;
-    background-color: #F2F2F2;
-}
-
-.specifytable {
-    background-color: #CCCCCC !important;
-}
-
 
 /*FOOTER*/
 
