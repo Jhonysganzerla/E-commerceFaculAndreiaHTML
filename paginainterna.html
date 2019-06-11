@@ -43,7 +43,7 @@
             <div class="col-sm-4 col-md-5 col-lg-6 col-xl-4 margin20">
                 <div class="col-12">
                     <span class="col-sm-12 col-8">
-                        Nossas Canecas tem como Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel adipisci,
+                        A Caneca branca oferece como Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel adipisci,
                         porro eum beatae at molestias laborum
                         nisi sequi maxime perferendis nostrum atque. Error ea officia voluptas reiciendis ut!
                     </span>
@@ -61,9 +61,7 @@
                     <input type="text" class="form-control col-6" id="cep">
                 </div>
                 <div class="col-5">
-                    <button type="button" onclick="calculatotal()"  class="btn btn-primary">Calcular Total</button>
-                    <button class='btn mt-2 mb-2 btn btn-lg btn-success' id="btncomprar" type='button' class='btn btn-primary'
-                     data-toggle='modal' data-target='#modalExemplo'>Comprar</button>
+                    <button type="button" onclick="calculatotal()"  id="btnCalcular" class="btn btn-primary">Calcular Total</button>
                 </div>
                 <br>
                 <div>
@@ -75,6 +73,68 @@
         </div>
         </div>
     </main>
+
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Cadastre-se para adquirir</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <label for="nome" class="col-4 col-form-label">Nome</label>
+                            <div class="col-8">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fa fa-address-card"></i>
+                                        </div>
+                                    </div>
+                                    <input id="nome" name="nome" placeholder="Nome" class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="senha" class="col-4 col-form-label">Senha</label>
+                            <div class="col-8">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fa fa-lock"></i>
+                                        </div>
+                                    </div>
+                                    <input id="senha" name="senha" placeholder="Senha" class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-4 col-form-label" for="email">Email</label>
+                            <div class="col-8">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fa fa-envelope"></i>
+                                        </div>
+                                    </div>
+                                    <input id="email" name="email" placeholder="Email" class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 <footer class="footer">
@@ -89,14 +149,12 @@
     <section id="formas-pgto">
         <p>Formas de Pagamento</p>
     </section>
-    <p>Copyright © 2025 www.tchecanecas.com.br, TODOS OS DIREITOS RESERVADOS.</p>
+    <p>Copyright © 2025 www.tchecanecas.com.br CNPJ: 123.465.798/1001-01 TODOS OS DIREITOS RESERVADOS.</p>
     <p>Avenida Tupi, 123 - Centro - CEP 85506-000 - Pato Branco - PR</p>
 </footer>
 
-
-
-
 <script src="./JS/javaScript.js"></script>
 <script src="./JS/jquery-3.1.0.min.js"></script>
+<script src="./bootstrap4/js/bootstrap.js"></script>
 
 </html>

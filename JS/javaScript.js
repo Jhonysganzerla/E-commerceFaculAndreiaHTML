@@ -58,7 +58,7 @@ function adquirirCaneca() {
     location = "./paginainterna.html"
 }
 
-function gotomain(){
+function gotomain() {
     location = "./index.html"
 }
 
@@ -66,15 +66,28 @@ function gotomain(){
 function calculatotal() {
     let total = document.getElementById("total_final")
     let frete = document.getElementById("frete")
-    frete.value = Math.round((document.getElementById("qtde").value * 0.01) * 40) + 1;
+    frete.value = Math.round((document.getElementById("qtde").value * 0.18) * 15) + 1;
     frete.innerHTML = 'Frete: R$' + frete.value + ',00'
     total.innerHTML = 'Total: R$' + (document.getElementById("qtde").value * 20 + frete.value) + ",00"
     if ((document.getElementById("qtde").value * 20) > 150) {
-        frete.innerHTML = "Grátis para compras acima de R$150"
+        frete.innerHTML = "Grátis para compras acima de R$160"
     }
-    $("#btncomprar").show();
+
+    this.addButton($('#btnCalcular'));
 }
 
+var apareceu = false;
+function addButton(item) {
+    if (!apareceu) {
+        item.parent().append('<button type="button" id="btnComprar" onclick="abrirModal()" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">  ' +
+            '    Comprar                     </button>')
+            apareceu = !apareceu;
+    }
+}
+
+function abrirModal() {
+    $('#exampleModalCenter').modal();
+}
 /*
 canecaMarfin
 canecaNeve
