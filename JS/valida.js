@@ -25,7 +25,7 @@ $(function(){
         errorPlacement: function(error,element){
             $('msgFCadastrarLogin').html('Preencha o formulário corretamente').show('slow');
         },
-        errorContainer: $('#msgFCadastroLogin'),
+        errorContainer: $('#msgFCadastrarLogin'),
         errorLabelContainer:$('#msgFCadastroLogin ul'),   
         wrapper:'li'
     });
