@@ -1,71 +1,57 @@
 
-function validaUsuario() {
+$(document).ready(function () {
+    $('#telefone').mask('(00) 00000-0000');
+    $('#cpf').mask('000.000.000-00');
+
     $("#formCadUsuario").validate({
         rules: {
             nome: {
                 required: true
             },
-            cadDtNasc: {
+            sobrenome: {
                 required: true
             },
-            cadCpf: {
+            cpf: {
                 required: true,
                 cpf: true
             },
-            cadTelCel: {
-                required: true,
-                telCel: true
-            },
-            cadTelRel: {
-                telRes: true
-            },
-            cadUsuario: {
+            telefone: {
                 required: true
             },
-            cadSenha: {
+            cademail: {
                 required: true,
 
             },
-            cadSenhaConfirm: {
-                required: true,
-                equalTo: "#cadSenha"
-            },
-            cadEndRua: {
-                required: true
-            },
-            cadEndBairro: {
-                required: true
-            },
-            cadEndNro: {
-                required: true
-            },
-            cadEndCep: {
-                required: true,
-                cep: true
-            },
-            cadEndCidade: {
-                required: true
-            }
         },
         messages: {
             nome: {
                 required: "Preenchimento obrigatório!"
             },
-            cadDtNasc: {
+            sobrenome: {
                 required: "Preenchimento obrigatório!"
             },
-            cadCpf: {
+            cpf: {
                 required: "Preenchimento obrigatório!"
             },
-            cadTelCel: {
+            telefone: {
                 required: "Preenchimento obrigatório!"
             },
-            cadUsuario: {
+            cademail: {
                 required: "Preenchimento obrigatório!"
             },
             cadSenha: {
                 required: "Preenchimento obrigatório!"
-            },
+            }
+        }
+    })
+
+/*     submitHandler: function (form) {
+        saveUsuario();
+    } */
+});
+
+
+/* ,
             cadSenhaConfirm: {
                 required: "Preenchimento obrigatório!",
                 equalTo: "A senha não corresponde com a que foi informada!"
@@ -84,10 +70,4 @@ function validaUsuario() {
             },
             cadEndCidade: {
                 required: "Preenchimento obrigatório!"
-            }
-        },
-        submitHandler: function (form) {
-            saveUsuario();
-        }
-    });
-}
+            } */

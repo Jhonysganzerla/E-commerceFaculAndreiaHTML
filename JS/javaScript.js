@@ -41,14 +41,6 @@ canecaPicker.addEventListener("click",event => {
 canecaPicker.click()
 }*/
 
-var alterTabs = false;
-
-$(document).ready(() => {
-    $('#telefone').mask('(00) 00000-0000');
-    $('#cpf').mask('000.000.000-00');
-
-    validaUsuario();
-});
 
 function modal() {
     if (window.showModalDialog) {
