@@ -21,6 +21,8 @@
     <ul class="navbar-nav mr-auto">
     </ul>
   </div>
+  <div class="white clickable fa fa-sign-in-alt" onclick="abrirModal()">Entrar</div>
+
 </nav>
 
 <body>
@@ -240,7 +242,7 @@
             <p> Inscreva-se para receber as próximas Novidades</p>
             <form>
               <input class="input" type="email" placeholder="Insira seu email">
-              <button class="newsletter-btn"><i class="fa fa-envelope"></i> Inscrever-se</button>
+              <button class="newsletter-btn" onclick="javascript:event.preventDefault()"><i class="fa fa-envelope"></i> Inscrever-se</button>
             </form>
           </div>
         </div>
@@ -248,13 +250,13 @@
     </div>
   </div>
 
-  <footer class="footer">
+  <footer class="footer col-12">
     <nav>
-      <ul>
-        <li><a href="#" title="Institucional">Institucional</a>
-        <li><a href="#" title="Central de Atendimento">Central de Atendimento</a></li>
-        <li><a href="#" title="Perguntas Frequentes">Perguntas Frequentes</a></li>
-        <li><a href="#" title="Contato">Contato</a></li>
+      <ul class="col-12">
+        <li><a href="#"  class="col-3" title="Institucional">Institucional</a>
+        <li><a href="#"  class="col-3" title="Central de Atendimento">Central de Atendimento</a></li>
+        <li><a href="#"  class="col-3" title="Perguntas Frequentes">Perguntas Frequentes</a></li>
+        <li><a href="#"  class="col-3" title="Contato">Contato</a></li>
       </ul>
     </nav>
     <section id="formas-pgto">
@@ -264,8 +266,143 @@
     <p>Avenida Tupi, 123 - Centro - CEP 85506-000 - Pato Branco - PR</p>
   </footer>
 
+<!--Modal-->
+
+<div class="modal fade" id="modalCentral" tabindex="-1" role="dialog" aria-labelledby="modalCentroTitulo">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Cadastre-se para adquirir</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row panel panel-primary">
+            <div class="col-12">
+              <ul class="nav nav-tabs">
+                <li class="nav-item active" onclick="altTabs()"><a data-toggle="tab" class="nav-link active" href="#cadastrais">Dados
+                    cadastrais</a>
+                </li>
+                <li class="nav-item"><a data-toggle="tab" onclick="altTabs()" class="nav-link" href="#loginSenha">Login e Senha</a></li>
+              </ul>
+            </div>
+
+            <form id="formCadUsuario" class="col-12" action="#" class="form-horizontal">
+                <div class="tab-content ">
+                <ul id="msgFCadastroLogin"></ul>
+                <div id="cadastrais" class="tab-pane active">
+
+                  <div class="panel-body">
+                    <fieldset>
+                      <legend>Dados pessoais</legend>
+                      <div class="row form-group">
+                        <label for="nome" class="col-md-3 control-label">Nome*</label>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" />
+                        </div>
+                      </div>
+                      <div class="row form-group">
+                        <label for="sobrenome" class="col-md-3 control-label">Sobrenome*</label>
+                        <div class="col-md-9">
+                          <input type="text" class="form-control" id="sobrenome" name="sobrenome"
+                            placeholder="Sobrenome" />
+                          <span id="msgSobrenome"></span>
+                        </div>
+                      </div>
+                      <div class="row form-group">
+                        <label for="genero" class="col-md-3 control-label">Gênero</label>
+                        <div class="col-md-9">
+                          <input id="radioM" name="radio" type="radio" />Masculino
+                          <input id="radioF" name="radio" type="radio" />Feminino
+                          <input id="radioB" name="radio" type="radio" />Não binário
+                        </div>
+                      </div>
+                      <div class="row form-group">
+                        <label for="cpf" class="col-md-3 control-label">CPF *</label>
+                        <div class="col-md-9">
+                          <input type="text" id="cpf" name="cpf" class="form-control"
+                            placeholder="Informe um CPF válido" />
+                        </div>
+                      </div>
+                      <div class="row form-group">
+                        <label for="dtNasc" class="col-md-3 control-label">Nascimento*</label>
+                        <div class="col-md-9">
+                          <input type="date" id="dtNasc" name="dtNasc" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="row form-group">
+                        <label for="telefone" class="col-md-3 control-label">Telefone
+                          *</label>
+                        <div class="col-md-9">
+                          <input type="text" id="telefone" name="telefone"  class="form-control" placeholder="(xx) xxxx-xxxx" />
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade">
+                  <div class="panel-body">
+                    <fieldset>
+                      <legend>Dados da conta</legend>
+                      <div class="row form-group">
+                        <label for="email" class="col-md-3 control-label">Email
+                          *</label>
+                        <div class="col-md-9">
+                          <input type="email" id="email" name="email" placeholder="loginl@exemplo.com"
+                            class="form-control" />
+                        </div>
+                      </div>
+                      <div class="row form-group">
+                        <label for="email" class="col-md-3 control-label">Confirmar
+                          Email *</label>
+                        <div class="col-md-9">
+                          <input type="email" id="cEmail" name="email" placeholder="loginl@exemplo.com"
+                            class="form-control" />
+                        </div>
+                      </div>
+                      <div class="row form-group">
+                        <label for="password" class="col-md-3 control-label">Senha
+                          *</label>
+                        <div class="col-md-9">
+                          <input id="password" name="password" type="password" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="row form-group">
+                        <label for="cPassword" class="col-md-3 control-label">Confirmar
+                          Senha *</label>
+                        <div class="col-md-9">
+                          <input id="cPassword" name="cPassword" type="password" class="form-control" />
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="submit" value="Enviar" class="btn btn-primary">Salvar</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
+
+
 </html>
+<script src="./JS/jquery-3.1.0.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="./JS/javaScript.js"></script>
+<script type="text/javascript" src="./JS/jquery.maskedinput.js"></script>
+<script src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>

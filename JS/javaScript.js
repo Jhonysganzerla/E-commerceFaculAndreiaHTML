@@ -41,12 +41,27 @@ canecaPicker.addEventListener("click",event => {
 canecaPicker.click()
 }*/
 
+var alterTabs = false;
+
+$(document).ready(() => {
+    $('#telefone').mask('(00) 00000-0000');
+    $('#cpf').mask('000.000.000-00');
+
+    validaUsuario();
+});
+
 function modal() {
     if (window.showModalDialog) {
         window.showModalDialog('../modal.html', [1, 4], "dialogwidth: 450; dialogheight: 300; resizable: yes");
     } else {
         alert("Seu navegador não suporta mais este método");
     }
+}
+
+function altTabs() {
+    $([required])
+    alterTabs = !alterTabs;
+    return alterTabs;
 }
 
 function classActiveChecker(id) {
@@ -67,27 +82,40 @@ function calculatotal() {
     let total = document.getElementById("total_final")
     let frete = document.getElementById("frete")
     frete.value = Math.round((document.getElementById("qtde").value * 0.18) * 15) + 1;
-    frete.innerHTML = 'Frete: R$' + frete.value + ',00'
-    total.innerHTML = 'Total: R$' + (document.getElementById("qtde").value * 20 + frete.value) + ",00"
-    if ((document.getElementById("qtde").value * 20) > 150) {
-        frete.innerHTML = "Grátis para compras acima de R$160"
+
+    if ((document.getElementById("qtde").value * 83500) > 83500) {
+        frete.innerHTML = "Grátis para compras acima de R$83500"
+        total.innerHTML = 'Total: R$' + (document.getElementById("qtde").value * 83500) + ",00"
+    } else {
+        frete.innerHTML = 'Frete: R$' + frete.value + ',00'
+        total.innerHTML = 'Total: R$' + (document.getElementById("qtde").value * 83500 + frete.value) + ",00"
     }
 
     this.addButton($('#btnCalcular'));
 }
 
-var apareceu = false;
+var logado = false;
 function addButton(item) {
-    if (!apareceu) {
-        item.parent().append('<button type="button" id="btnComprar" onclick="abrirModal()" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">  ' +
-            '    Comprar                     </button>')
-            apareceu = !apareceu;
+    if (!logado) {
+        item.parent().append(
+            `
+        <button type="button" id="btnComprar" onclick="abrirModal()" class="btn btn-success" data-toggle="modal" data-target="#modalCentral"> 
+            Comprar                   
+        </button>
+            `
+        );
+
+        logado = !logado;
     }
 }
 
 function abrirModal() {
-    $('#exampleModalCenter').modal();
+    $('#modalCentral').modal('show');
 }
+
+
+
+
 /*
 canecaMarfin
 canecaNeve

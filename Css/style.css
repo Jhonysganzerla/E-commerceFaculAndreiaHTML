@@ -31,6 +31,21 @@ html {
     font-size: 10px;
     font-weight: 100;
 }
+.modal-dialog.modal-dialog-centered {
+    width: 60% !important;
+    max-width: 70%;
+}
+
+.modal-header {
+
+background-color: #337AB7;
+
+padding:16px 16px;
+
+color:#FFF;
+
+border-bottom:2px dashed #337AB7;
+}
 
 
 /* Main Top */
@@ -305,13 +320,13 @@ footer.footer p {
 }
 
 footer.footer nav ul {
-    height: 20px;
+    height: 50px;
     background: #e1e1e1;
 }
 
 footer.footer nav ul li {
     float: left;
-    width: 24%;
+    width: 25%;
     text-align: center;
     display: block;
     color: #333333

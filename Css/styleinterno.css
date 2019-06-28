@@ -23,6 +23,7 @@
 
 .modal-dialog.modal-dialog-centered {
         width: 60% !important;
+        max-width: 70%;
 }
  
 .modal-header {

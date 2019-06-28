@@ -20,6 +20,7 @@
         <ul class="navbar-nav mr-auto">
         </ul>
     </div>
+    <div class="white clickable fa fa-sign-in-alt" onclick="abrirModal()">Entrar</div>
 </nav>
 
 
@@ -49,12 +50,12 @@
                         nisi sequi maxime perferendis nostrum atque. Error ea officia voluptas reiciendis ut!
                     </span>
                     <div>
-                        <b>Valor unidade R$2,00</b>
+                        <b>Valor unidade R$1.67</b>
                     </div>
                 </div>
                 <br>
                 <div class="col-12 form-group row">
-                    <label class="col-8">Quantas caixas(10 un.) deseja adquirir?</label>
+                    <label class="col-8">Quantos Paletes(50 cx)(10un p/caixa) deseja adquirir?</label>
                     <input type="number" class="form-control col-2" id="qtde">
                 </div>
                 <div class="col-12 form-group row">
@@ -77,138 +78,7 @@
     </main>
 
 
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalCenterTitle">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Cadastre-se para adquirir</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                        <div class="container">
-                            <div class="row panel panel-primary">
-                                <div class="col-12">
-                                    <ul class="nav nav-tabs">
-                                        <li class="nav-item active"><a data-toggle="tab" class="nav-link active" href="#cadastrais">Dados cadastrais</a>
-                                        </li>
-                                        <li class="nav-item"><a data-toggle="tab" class="nav-link" href="#loginSenha">Login e Senha</a></li>
-                                    </ul>
-                                </div>
-                                <form id="formularioPrincipal" class="col-12" action="#" method="post" class="form-horizontal">
-                                    <div class="tab-content ">
-                                        <div id="msgFCadastrarLogin" class="alert alert-warning"></div>
-                                            <ul id="msgFCadastroLogin"></ul>
-                                        <div id="cadastrais" class="tab-pane fade in active">
 
-                                            <div class="panel-body">
-                                                <fieldset>
-                                                    <legend>Dados pessoais</legend>
-                                                    <div class="row form-group">
-                                                        <label for="nome" class="col-md-3 control-label">Nome*</label>
-                                                        <div class="col-md-9">
-                                                            <input type="text" class="form-control" id="nome"
-                                                                name="nome" placeholder="Nome" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <label for="sobrenome"
-                                                            class="col-md-3 control-label">Sobrenome*</label>
-                                                        <div class="col-md-9">
-                                                            <input type="text" class="form-control" id="sobrenome"
-                                                                name="sobrenome" placeholder="Sobrenome" />
-                                                            <span id="msgSobrenome"></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <label for="genero" class="col-md-3 control-label">Gênero
-                                                            *</label>
-                                                        <div class="col-md-9">
-                                                            <input id="radioM" name="radio" type="radio" />Masculino
-                                                            <input id="radioF" name="radio" type="radio" />Feminino
-                                                        </div>
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <label for="cpf" class="col-md-3 control-label">CPF *</label>
-                                                        <div class="col-md-9">
-                                                            <input type="text" id="cpf" name="cpf" class="form-control"
-                                                                placeholder="Informe um CPF válido" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <label for="dtNasc" class="col-md-3 control-label">Nascimento*</label>
-                                                        <div class="col-md-9">
-                                                            <input type="date" id="dtNasc" name="dtNasc"
-                                                                class="form-control" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <label for="tel" class="col-md-3 control-label">Telefone
-                                                            *</label>
-                                                        <div class="col-md-9">
-                                                            <input type="text" id="tel" name="tel" class="form-control"
-                                                                placeholder="(xx) xxxx-xxxx" />
-                                                        </div>
-                                                    </div>
-                                                </fieldset>
-                                            </div>
-                                        </div>
-
-
-                                        <div id="loginSenha" class="tab-pane fade">
-
-                                            <div class="panel-body">
-                                                <fieldset>
-                                                    <legend>Dados da conta</legend>
-                                                    <div class="row form-group">
-                                                        <label for="email" class="col-md-3 control-label">Email
-                                                            *</label>
-                                                        <div class="col-md-9">
-                                                            <input type="text" id="email" name="email"
-                                                                placeholder="loginl@exemplo.com" class="form-control" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <label for="email" class="col-md-3 control-label">Confirmar
-                                                            Email *</label>
-                                                        <div class="col-md-9">
-                                                            <input type="email" id="cEmail" name="email"
-                                                                placeholder="loginl@exemplo.com" class="form-control" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <label for="password" class="col-md-3 control-label">Senha
-                                                            *</label>
-                                                        <div class="col-md-9">
-                                                            <input id="password" name="password" type="password"
-                                                                class="form-control" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <label for="cPassword" class="col-md-3 control-label">Confirmar
-                                                            Senha *</label>
-                                                        <div class="col-md-9">
-                                                            <input id="cPassword" name="cPassword" type="password"
-                                                                class="form-control" />
-                                                        </div>
-                                                    </div>
-                                                </fieldset>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" value="Enviar" class="btn btn-primary">Salvar</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
 </body>
 <footer class="footer">
@@ -227,11 +97,152 @@
     <p>Avenida Tupi, 123 - Centro - CEP 85506-000 - Pato Branco - PR</p>
 </footer>
 
-<script src="./JS/javaScript.js"></script>
+
+
+
+
+
+
+
+
+
+<!--Modal-->
+
+
+<div class="modal fade" id="modalCentral" tabindex="-1" role="dialog" aria-labelledby="modalCentroTitulo">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Cadastre-se para adquirir</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row panel panel-primary">
+              <div class="col-12">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item active"><a data-toggle="tab" class="nav-link active" href="#cadastrais">Dados
+                      cadastrais</a>
+                  </li>
+                  <li class="nav-item"><a data-toggle="tab" class="nav-link" href="#loginSenha">Login e Senha</a></li>
+                </ul>
+              </div>
+
+              <form id="formularioPrincipal" class="col-12" action="#" class="form-horizontal">
+                  <div class="tab-content ">
+                  <ul id="msgFCadastroLogin"></ul>
+                  <div id="cadastrais" class="tab-pane active">
+
+                    <div class="panel-body">
+                      <fieldset>
+                        <legend>Dados pessoais</legend>
+                        <div class="row form-group">
+                          <label for="nome" class="col-md-3 control-label">Nome*</label>
+                          <div class="col-md-9">
+                            <input type="text" class="form-control" required id="nome" name="nome" placeholder="Nome" />
+                          </div>
+                        </div>
+                        <div class="row form-group">
+                          <label for="sobrenome" class="col-md-3 control-label">Sobrenome*</label>
+                          <div class="col-md-9">
+                            <input type="text" class="form-control" required id="sobrenome" name="sobrenome"
+                              placeholder="Sobrenome" />
+                            <span id="msgSobrenome"></span>
+                          </div>
+                        </div>
+                        <div class="row form-group">
+                          <label for="genero" class="col-md-3 control-label">Gênero</label>
+                          <div class="col-md-9">
+                            <input id="radioM" name="radio" type="radio" />Masculino
+                            <input id="radioF" name="radio" type="radio" />Feminino
+                            <input id="radioB" name="radio" type="radio" />Não binário
+                          </div>
+                        </div>
+                        <div class="row form-group">
+                          <label for="cpf" class="col-md-3 control-label">CPF *</label>
+                          <div class="col-md-9">
+                            <input type="text" id="cpf" name="cpf" required class="form-control"
+                              placeholder="Informe um CPF válido" />
+                          </div>
+                        </div>
+                        <div class="row form-group">
+                          <label for="dtNasc" class="col-md-3 control-label">Nascimento*</label>
+                          <div class="col-md-9">
+                            <input type="date" id="dtNasc" name="dtNasc" required class="form-control" />
+                          </div>
+                        </div>
+                        <div class="row form-group">
+                          <label for="telefone" class="col-md-3 control-label">Telefone
+                            *</label>
+                          <div class="col-md-9">
+                            <input type="text" id="telefone" name="telefone" required  class="form-control" placeholder="(xx) xxxx-xxxx" />
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                  </div>
+
+                  <div id="loginSenha" class="tab-pane fade">
+                    <div class="panel-body">
+                      <fieldset>
+                        <legend>Dados da conta</legend>
+                        <div class="row form-group">
+                          <label for="email" class="col-md-3 control-label">Email
+                            *</label>
+                          <div class="col-md-9">
+                            <input type="email" id="email" name="email" required placeholder="loginl@exemplo.com"
+                              class="form-control" />
+                          </div>
+                        </div>
+                        <div class="row form-group">
+                          <label for="email" class="col-md-3 control-label">Confirmar
+                            Email *</label>
+                          <div class="col-md-9">
+                            <input type="email" id="cEmail" name="email" required placeholder="loginl@exemplo.com"
+                              class="form-control" />
+                          </div>
+                        </div>
+                        <div class="row form-group">
+                          <label for="password" class="col-md-3 control-label">Senha
+                            *</label>
+                          <div class="col-md-9">
+                            <input id="password" name="password" type="password" required class="form-control" />
+                          </div>
+                        </div>
+                        <div class="row form-group">
+                          <label for="cPassword" class="col-md-3 control-label">Confirmar
+                            Senha *</label>
+                          <div class="col-md-9">
+                            <input id="cPassword" name="cPassword" type="password" required class="form-control" />
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" value="Enviar" class="btn btn-primary">Salvar</button>
+                  </div>
+              </form>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+
+
 <script src="./JS/jquery-3.1.0.min.js"></script>
+<script src="./JS/javaScript.js"></script>
 <script src="./bootstrap4/js/bootstrap.js"></script>
 <script src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.js" type="text/javascript"></script>
 <script type="text/javascript" src="./JS/jquery.maskedinput.js"></script>
-<script type="text/javascript" src="./JS/valida.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+<script src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.js"></script>
 
 </html>
