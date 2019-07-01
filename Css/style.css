@@ -114,6 +114,7 @@ header:before {
 }
 
 .banner-image {
+    min-height: 70%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -353,6 +354,7 @@ footer.footer nav ul li {
 
 .rainbow {
     animation: rainbow 2s infinite;
+    margin-bottom: 2%;
 }
 
 @keyframes rainbow {

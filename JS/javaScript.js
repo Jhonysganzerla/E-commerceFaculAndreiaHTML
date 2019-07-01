@@ -39,7 +39,29 @@ canecaPicker.addEventListener("click",event => {
       
 })
 canecaPicker.click()
+
+
+
+function classActiveChecker(id) {
+    return document.getElementById(id).parentElement.classList.contains("active")
+}
 }*/
+var logado = false;
+var usuario = null;
+
+$(document).ready(function () {
+    if (localStorage.getItem("usuario") != null) {
+        usuario = JSON.parse(localStorage.getItem("usuario"));
+        logado = true;
+        $('#usuarioEntrar')[0].innerHTML = usuario;
+    }
+
+    if (logado == false) {
+        $('#usuarioEntrar')[0].innerHTML = "Entrar";
+    }
+
+});
+
 
 
 function modal() {
@@ -50,65 +72,73 @@ function modal() {
     }
 }
 
-function altTabs() {
-    $([required])
-    alterTabs = !alterTabs;
-    return alterTabs;
-}
-
-function classActiveChecker(id) {
-    return document.getElementById(id).parentElement.classList.contains("active")
-}
-
-
 function adquirirCaneca() {
-    location = "./paginainterna.html"
+    location = "./paginainterna.html";
 }
 
 function gotomain() {
-    location = "./index.html"
+    location = "./index.html";
 }
 
 
 function calculatotal() {
-    let total = document.getElementById("total_final")
-    let frete = document.getElementById("frete")
+    let total = document.getElementById("total_final");
+    let frete = document.getElementById("frete");
+
     frete.value = Math.round((document.getElementById("qtde").value * 0.18) * 15) + 1;
 
     if ((document.getElementById("qtde").value * 83500) > 83500) {
-        frete.innerHTML = "Grátis para compras acima de R$83500"
-        total.innerHTML = 'Total: R$' + (document.getElementById("qtde").value * 83500) + ",00"
+        frete.innerHTML = "Grátis para compras acima de R$83500";
+        total.innerHTML = 'Total: R$' + (document.getElementById("qtde").value * 83500) + ",00";
     } else {
-        frete.innerHTML = 'Frete: R$' + frete.value + ',00'
-        total.innerHTML = 'Total: R$' + (document.getElementById("qtde").value * 83500 + frete.value) + ",00"
+        frete.innerHTML = 'Frete: R$' + frete.value + ',00';
+        total.innerHTML = 'Total: R$' + (document.getElementById("qtde").value * 83500 + frete.value) + ",00";
     }
 
     this.addButton($('#btnCalcular'));
 }
 
-var logado = false;
 function addButton(item) {
-    if (!logado) {
-        item.parent().append(
-            `
+    if (($('#btnCalcular') == null)){
+        if (!logado) {
+            item.parent().append(
+                `
         <button type="button" id="btnComprar" onclick="abrirModal()" class="btn btn-success" data-toggle="modal" data-target="#modalCentral"> 
             Comprar                   
         </button>
             `
-        );
+            );
 
-        logado = !logado;
+        } else {
+            item.parent().append(
+                `
+        <button type="button" id="btnComprar" onclick="adquiridoComSucesso()" class="btn btn-success"> 
+            Comprar                   
+        </button>
+            `
+            );
+        }
     }
 }
 
 function abrirModal() {
-    $('#modalCentral').modal('show');
+    if (logado == false) {
+        $('#modalCentral').modal('show');
+    } else {
+        if (confirm('Tem certeza que deseja sair?')) {
+            localStorage.removeItem('usuario');
+            location.reload();
+        }
+    }
 }
 
+function adquiridoComSucesso() {
+    alert('Produto adquirido com sucesso');
+}
 
-
-
-/*
-canecaMarfin
-canecaNeve
-canecaOff*/
+function saveUsuario() {
+    if ($("#logEmail").val() != null && $("#logEmail").val() != '')
+        localStorage.setItem("usuario", JSON.stringify($("#logEmail").val()));
+    else
+        localStorage.setItem("usuario", JSON.stringify($("#cademail").val()));
+}

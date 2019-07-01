@@ -1,73 +1,102 @@
+requiredMsg = `<p class="btn btn-outline-danger">Preenchimento obrigatório!</p>`;
 
 $(document).ready(function () {
     $('#telefone').mask('(00) 00000-0000');
     $('#cpf').mask('000.000.000-00');
+    changeValidation(true);
 
-    $("#formCadUsuario").validate({
+    /*$("#formComprar").validate({
         rules: {
-            nome: {
-                required: true
-            },
-            sobrenome: {
-                required: true
-            },
-            cpf: {
+            logEmail: {
                 required: true,
-                cpf: true
             },
-            telefone: {
-                required: true
-            },
-            cademail: {
+            logPassword: {
                 required: true,
-
             },
         },
         messages: {
-            nome: {
-                required: "Preenchimento obrigatório!"
+            logEmail: {
+                required: requiredMsg
             },
-            sobrenome: {
-                required: "Preenchimento obrigatório!"
+            logPassword: {
+                required: requiredMsg
             },
-            cpf: {
-                required: "Preenchimento obrigatório!"
-            },
-            telefone: {
-                required: "Preenchimento obrigatório!"
-            },
-            cademail: {
-                required: "Preenchimento obrigatório!"
-            },
-            cadSenha: {
-                required: "Preenchimento obrigatório!"
-            }
-        }
-    })
+        },
+    })*/
 
-/*     submitHandler: function (form) {
-        saveUsuario();
-    } */
+
 });
 
+function changeValidation(validarcadastro){
+    
+    $("#formCadUsuario").rules("remove");
 
-/* ,
-            cadSenhaConfirm: {
-                required: "Preenchimento obrigatório!",
-                equalTo: "A senha não corresponde com a que foi informada!"
+    if (validarcadastro){
+        $("#formCadUsuario").validate({
+            rules: {
+                nome: {
+                    required: true
+                },
+                sobrenome: {
+                    required: true
+                },
+                cpf: {
+                    required: true,
+                },
+                telefone: {
+                    required: true
+                },
+                cademail: {
+                    required: true,
+    
+                },
+                cademail: {
+                    required: true,
+                },
+                dataNasc: {
+                    required: true,
+                },
             },
-            cadEndRua: {
-                required: "Preenchimento obrigatório!"
+            messages: {
+                nome: {
+                    required: requiredMsg
+                },
+                sobrenome: {
+                    required: requiredMsg
+                },
+                cpf: {
+                    required: requiredMsg
+                },
+                telefone: {
+                    required: requiredMsg
+                },
+                cademail: {
+                    required: requiredMsg
+                },
+                dataNasc: {
+                    required: requiredMsg
+                },
+    
+            }
+        })
+    }else{
+        $("#formCadUsuario").validate({
+            rules: {
+                logEmail: {
+                    required: true,
+                },
+                logPassword: {
+                    required: true,
+                },
             },
-            cadEndBairro: {
-                required: "Preenchimento obrigatório!"
-            },
-            cadEndNro: {
-                required: "Preenchimento obrigatório!"
-            },
-            cadEndCep: {
-                required: "Preenchimento obrigatório!"
-            },
-            cadEndCidade: {
-                required: "Preenchimento obrigatório!"
-            } */
+            messages: {
+                logEmail: {
+                    required: requiredMsg
+                },
+                logPassword: {
+                    required: requiredMsg
+                },
+            }
+        })
+    }
+}
