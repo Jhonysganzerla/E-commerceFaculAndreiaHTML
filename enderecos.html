@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Css/styleinterno.css">
+    <link rel="stylesheet" href="./bootstrap4/css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <img src="Images/CanecasPic/LogoImage.png" class="logo clickable" onclick="gotomain()">
+    <h1 class="title text-left clickable" onclick="gotomain()">Tchê Canecas</h1>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+    </div>
+    <div id="usuarioEntrar" class="white clickable fa fa-sign-in-alt" onclick="abrirModal()"></div>
+</nav>
+
+
+<body>
+    <header class="banner-image banner">
+        <div>
+            <h1>TchêCanecas</h1>
+            <h3>A maior loja de Canecas para Sublimação do Sul do Brasil</h3>
+        </div>
+    </header>
+
+    <main style="padding-bottom:200px">
+        <h1 class="text-center titulo">Cadastro de endereços</h1>
+        <hr>
+
+        <div class="offset-4 text-center col-4">
+          <label class="control-label">Rua</label>
+          <input type="text" required class="form-control" id="end_rua">
+
+          <label class="control-label">Bairro</label>
+          <input type="text" required class="form-control" id="end_bairro">
+
+          <label class="control-label">Numero</label>
+          <input type="text" required class="form-control" id="end_numero">
+
+          <label class="control-label">CEP</label>
+          <input type="text" required class="form-control" id="end_CEP">
+
+
+          <br>
+          <button onclick="saveEndereco()">Salvar</button>
+
+        </div>
+
+        
+
+
+
+       
+    </main>
+
+
+
+
+</body>
+<footer class="footer">
+    <nav>
+        <ul>
+            <li><a href="#" title="Institucional">Institucional</a>
+            <li><a href="#" title="Central de Atendimento">Central de Atendimento</a></li>
+            <li><a href="#" title="Perguntas Frequentes">Perguntas Frequentes</a></li>
+            <li><a href="#" title="Contato">Contato</a></li>
+        </ul>
+    </nav>
+    <section id="formas-pgto">
+        <p>Formas de Pagamento</p>
+    </section>
+    <p>Copyright © 2025 www.tchecanecas.com.br CNPJ: 123.465.798/1001-01 TODOS OS DIREITOS RESERVADOS.</p>
+    <p>Avenida Tupi, 123 - Centro - CEP 85506-000 - Pato Branco - PR</p>
+</footer>
+
+
+
+
+
+
+
+
+</html>
+
+
+<script src="./JS/jquery-3.1.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="./JS/javaScript.js"></script>
+<script type="text/javascript" src="./JS/jquery.maskedinput.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+<script src="js/validator.js"></script>
+
+
+

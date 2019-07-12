@@ -142,3 +142,15 @@ function saveUsuario() {
     else
         localStorage.setItem("usuario", JSON.stringify($("#cademail").val()));
 }
+
+
+function saveEndereco(){
+    let endereco = {
+        rua: $('#end_rua').val(),
+        bairro: $('#end_bairro').val(),
+        numero:  $('#end_numero').val(),
+        CEP: $('#end_CEP').val(),
+    }
+    localStorage.setItem("endereco", JSON.stringify(endereco));
+
+}
