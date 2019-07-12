@@ -48,8 +48,11 @@ function classActiveChecker(id) {
 }*/
 var logado = false;
 var usuario = null;
+var enderecoscadastrados = [];
 
 $(document).ready(function () {
+    $('#end_CEP').mask('00000-000');
+
     if (localStorage.getItem("usuario") != null) {
         usuario = JSON.parse(localStorage.getItem("usuario"));
         logado = true;
@@ -60,7 +63,14 @@ $(document).ready(function () {
         $('#usuarioEntrar')[0].innerHTML = "Entrar";
     }
 
+
 });
+
+
+if (localStorage.getItem("endereco") != null) {
+    this.enderecoscadastrados = JSON.parse(localStorage.getItem("endereco"));
+    preencheAquelaDiv();
+}
 
 
 
@@ -146,11 +156,69 @@ function saveUsuario() {
 
 function saveEndereco(){
     let endereco = {
+        nome: $('#end_nome').val(),
         rua: $('#end_rua').val(),
         bairro: $('#end_bairro').val(),
+        UF: $('#end_UF').val(),
         numero:  $('#end_numero').val(),
         CEP: $('#end_CEP').val(),
     }
-    localStorage.setItem("endereco", JSON.stringify(endereco));
+
+    if(endereco == "" || endereco.nome == "" || endereco.rua == "" || endereco.bairro == "" || endereco.UF == "" || endereco.numero == "" || endereco.CEP == "" ){
+
+    }else{
+        this.enderecoscadastrados.push(endereco)
+        localStorage.setItem("endereco", JSON.stringify(this.enderecoscadastrados));
+        this.preencheAquelaDiv();
+    }
+}
+
+
+function preencheAquelaDiv(){
+    $("#quadradoQueEsperaAsCoisas").children().remove();
+  
+    this.enderecoscadastrados.forEach(endereco => {
+
+
+        $("#quadradoQueEsperaAsCoisas").append(`
+            <div class="col-5 row pl-5 pb-2 textao">
+            <div class="col-9" style="border: solid black 1px">
+              ${endereco.nome}
+              <div class="float-right">
+              <i class="fa fa-pencil-alt"></i>
+              <i class=" fa fa-times clickable" onclick="removeendereco(${endereco.nome})"></i>
+              </div>
+            </div>
+                <div class="col-9 bordaendereco sombra text-left pb-3">
+                <label class="col-12">Rua: ${endereco.rua} </label>
+                <label class="col-12">Numero: ${endereco.numero} </label>
+                <label class="col-12">Bairro: ${endereco.bairro} </label>
+                <label class="col-12">UF: ${endereco.UF}  </label>
+                <label class="col-12">CEP: ${endereco.CEP} </label>
+                <hr>
+                <input type="radio"> Selecionar como principal
+                
+                </div>
+
+    
+
+            </div>
+        
+        `)
+    })
+}
+function removeendereco(node){
+    let a = this.enderecoscadastrados.find(e => e.nome == node)
+    this.enderecoscadastrados.splice(a,1);
+    localStorage.setItem("endereco", JSON.stringify(this.enderecoscadastrados));
+    this.preencheAquelaDiv();
+}
+
+function limpaListaDeEndereco(){
+    localStorage.removeItem("endereco");
+    location.reload();
+}
+
+function deletaEndereco(){
 
 }
